@@ -8,6 +8,8 @@ const moment = require('moment');
 const ms = require("ms")
 const commands = client.commands = new Collection();
 const aliases = client.aliases = new Collection();
+const buton = require('discord-buttons')
+buton(client)
 
 client.on("ready", () => {
     client.user.setPresence({activity: {name: (config.bot.botdurum)}, status: "online"})
@@ -175,4 +177,57 @@ client.on('guildMemberAdd', (member) => {
   member.setNickname(name)
 });
 
-    //------------------------------------------------------------------------------------------------------------\\
+    //----------------------
+lient.on("message", (message) => {
+
+    if (message.content !== ".buton" || message.author.bot) return;
+  
+  let EtkinlikKatılımcısı = new buton.MessageButton()
+    .setStyle('red') 
+    .setLabel('Etkinlik Katılımcısı') 
+    .setID('EtkinlikKatılımcısı'); 
+
+  let ÇekilişKatılımcısı = new buton.MessageButton()
+    .setStyle('green') 
+    .setLabel('Çekiliş Katılımcısı') 
+    .setID('ÇekilişKatılımcısı');
+  
+  message.channel.send(`
+Merhaba!
+ 
+Çekiliş Katılımcısı alarak **nitro, spotify, netflix ve benzeri çekilişlere katılıp ödül sahibi** olabilirsiniz.
+Aşağıda bulunan butonlardan **Etkinlik Katılımcısı alarak konserlerimizden, oyunlarımızdan, ve etkinliklerimizden** faydalanabilirsiniz.
+\`NOT:\` Kayıtlı , kayıtsız olarak hepiniz bu kanalı görebilmektesiniz. Bu sunucumuzda everyone here atılmayacağından dolayı kesinlikle rollerinizi almayı unutmayın.
+`, { 
+    buttons: [ EtkinlikKatılımcısı, ÇekilişKatılımcısı]
+});
+});
+  
+client.on('clickButton', async (button) => {
+
+    if (button.id === 'EtkinlikKatılımcısı') {
+        if (button.clicker.member.roles.cache.get((ayarlar.EtkinlikKatılımcısı))) {
+            await button.clicker.member.roles.remove((ayarlar.EtkinlikKatılımcısı))
+            await button.reply.think(true);
+            await button.reply.edit("Etkinlik Katılımcısı rolü başarıyla üzerinizden alındı!")
+        } else {
+            await button.clicker.member.roles.add(((ayarlar.EtkinlikKatılımcısı)))
+            await button.reply.think(true);
+            await button.reply.edit("Etkinlik Katılımcısı rolünü başarıyla aldınız!")
+        }
+    }
+
+
+    if (button.id === 'ÇekilişKatılımcısı') {
+        if (button.clicker.member.roles.cache.get((ayarlar.ÇekilişKatılımcısı))) {
+            await button.clicker.member.roles.remove((ayarlar.ÇekilişKatılımcısı))
+            await button.reply.think(true);
+            await button.reply.edit(`Çekiliş Katılımcısı rolü başarıyla üzerinizden alındı!`)
+        } else {
+            await button.clicker.member.roles.add((ayarlar.ÇekilişKatılımcısı))
+            await button.reply.think(true);
+            await button.reply.edit(`Çekiliş Katılımcısı rolünü başarıyla aldınız!`)
+        }
+
+    }
+  });
