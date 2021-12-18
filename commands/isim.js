@@ -6,7 +6,7 @@ module.exports = {
     name: 'isim',
     aliases: ['i'],
     run: async (client, message, args) => {
-        const embed = new Discord.MessageEmbed().setFooter("Developed By Jahky").setAuthor(message.author.username, message.author.avatarURL()).setTimestamp().setColor("00f1ff");
+        const embed = new Discord.MessageEmbed().setFooter("İmmortal").setAuthor(message.author.username, message.author.avatarURL()).setTimestamp().setColor("00f1ff");
         var member = message.mentions.users.first() || message.guild.members.cache.get(args[0]);
         var name = args[1]
         var age = args[2]
