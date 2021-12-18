@@ -10,6 +10,6 @@ module.exports = {
         if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(embed.setDescription("Bu komutu kullanabilmek için öncelikle gerekli yetkin olmalı!"))
         if (!member) return message.channel.send(embed.setDescription("Öncelikle bir kullanıcı etiketle!"))
         await message.guild.members.cache.get(member.id).roles.add(config.roles.musiciansrole)
-        message.channel.send(embed.setDescription(`${member} kullanıcısına başarıyla \`Müsizyen\` rolü verildi!`))
+        message.channel.send(embed.setDescription(`${member} kullanıcısına başarıyla \`Müzisyen\` rolü verildi!`))
     }
 }
