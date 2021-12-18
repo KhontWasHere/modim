@@ -11,11 +11,11 @@ module.exports = {
         var Boost = message.guild.premiumSubscriptionCount;
 
         message.channel.send(new MessageEmbed().setDescription(`
-    \`❯\` Sunucumuzda toplam **${TotalMember}** kullanıcı bulunmaktadır.
-    \`❯\` Sunucumuzda toplam **${Online}** aktif kullanıcı bulunmaktadır.
-    \`❯\` Toplam **${Taglı}** \`${config.registration.GuilDTag}\` kişi tagımızda bulunuyor.
-    \`❯\` Seste **${Voice}** kullanıcı bulunmaktadır.
-    \`❯\` Sunucuya toplam **${Boost}** takviye yapılmıştır. 
+    \`<a:immortalkelebek:921679283410317323>\` Sunucumuzda toplam **${TotalMember}** kullanıcı bulunmaktadır.
+    \`<a:immortalkelebek:921679283410317323>\` Sunucumuzda toplam **${Online}** aktif kullanıcı bulunmaktadır.
+    \`<a:immortalkelebek:921679283410317323>\` Toplam **${Taglı}** \`${config.registration.GuilDTag}\` kişi tagımızda bulunuyor.
+    \`<a:immortalkelebek:921679283410317323>\` Seste **${Voice}** kullanıcı bulunmaktadır.
+    \`<a:immortalkelebek:921679283410317323>\` Sunucuya toplam **${Boost}** takviye yapılmıştır. 
     `))
     }
 }
