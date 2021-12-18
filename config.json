@@ -1,0 +1,60 @@
+{
+    "token": "ODUyMTc5MjA2NDIyNTI4MDUw.YMDDuw.cI0xN5ig1Ncn-3bnHSruYtt85jk",
+    "bot": {
+        "owner": "536834555898757131",
+        "botdurum": "İmmortal Ekip Alım",
+        "prefix": ".",
+        "GuildID": "888097287262326814"
+    },
+    "penals": {
+        "ban": {
+            "staff": "921443100323356691",
+            "log": "921443104152756231",
+            "limit": 3
+        },
+        "jail": {
+            "staff": "921443100323356690",
+            "roles": "921443100289806450",
+            "log": "921443104152756232",
+            "limit": 5
+        },
+        "mute": {
+            "staff": "921443100323356689",
+            "roles": "921443100281438237",
+            "log": "921443104152756233",
+            "limit": 5
+        },
+      "points": {
+        "mutepoints": "10",
+        "banpoints": "50",
+        "jailpoints": "100"
+      }
+    },
+    "logs": {
+        "messagelog": "909838109984845824",
+        "voicelog": "909838140297052230"
+       
+
+    },
+    "roles": {
+        "boosterrole": "921472846012768277",
+        "viprole": "921443100306587660",
+        "designerrole": "921443100197543965",
+        "musiciansrole": "921443100197543963"
+    },
+    "meeting": {
+        "katıldı": "921443100352741406",
+        "yetkili": "921443100365320250",
+        "meetingchannel": "921443101741035576"
+    },
+    "channels": {
+        "chat": "921443101552304194",
+        "voicechannel": "921680500798656512"
+    },
+    "parents": {
+        "publicparents": "908750973139308544"
+    },
+    "registration": {
+        "GuilDTag": "∆"
+    }
+}
