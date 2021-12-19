@@ -12,10 +12,10 @@ module.exports = {
 
         message.channel.send(new MessageEmbed().setDescription(`
     <a:immortalkelebek:921679283410317323> Sunucumuzda toplam **${TotalMember}** kullanıcı bulunmaktadır.
-    \`<a:immortalkelebek:921679283410317323> Sunucumuzda toplam **${Online}** aktif kullanıcı bulunmaktadır.
-    \`<a:immortalkelebek:921679283410317323> Toplam **${Taglı}** \`${config.registration.GuilDTag}\` kişi tagımızda bulunuyor.
-    \`<a:immortalkelebek:921679283410317323> Seste **${Voice}** kullanıcı bulunmaktadır.
-    \`<a:immortalkelebek:921679283410317323> Sunucuya toplam **${Boost}** takviye yapılmıştır. 
-    `))
+    <a:immortalkelebek:921679283410317323> Sunucumuzda toplam **${Online}** aktif kullanıcı bulunmaktadır.
+    <a:immortalkelebek:921679283410317323> Toplam **${Taglı}** ${config.registration.GuilDTag} kişi tagımızda bulunuyor.
+    <a:immortalkelebek:921679283410317323> Seste **${Voice}** kullanıcı bulunmaktadır.
+    <a:immortalkelebek:921679283410317323> Sunucuya toplam **${Boost}** takviye yapılmıştır.
+    `)
     }
 }
