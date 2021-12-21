@@ -7,7 +7,7 @@ module.exports = {
     aliases: ["kalıcıban"],
     run: async (client, message, args) => {
         let guild = message.guild
-        let embed = new MessageEmbed().setAuthor(message.member.displayName, message.author.avatarURL({dynamic: true})).setFooter("Matthe & Jahky").setColor("RANDOM").setTimestamp();
+        let embed = new MessageEmbed().setAuthor(message.member.displayName, message.author.avatarURL({dynamic: true})).setFooter("Bak yarram khont bu").setColor("RANDOM").setTimestamp();
         if(![config.bot.owner].includes(message.author.id) && message.guild.owner.id !== message.author.id) return message.channel.send(embed.setDescription(`Bu komutu kullanabilmek için öncelikle gerekli yetkin olmalı!`))
         let member = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
         if (!member) return message.channel.send(embed.setDescription(`Öncelikle kalıcı banlanacak kullanıcıyı belirtmelisin!`))
