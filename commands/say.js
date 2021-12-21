@@ -125,4 +125,3 @@ ${erkekk}
 
 message.channel.send(theartist)
 
-}
