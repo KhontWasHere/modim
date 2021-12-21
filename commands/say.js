@@ -24,6 +24,8 @@ mapping[c] = mapping[c.toUpperCase()] = `:regional_indicator_${c}:`;
 });
 
 exports.run = function(client, message, args) {
+name: 'say',
+    aliases: ["count", "say"],
 
 let selam = message.guild.members.cache.filter(
 m => m.user.presence.status === "offline"
@@ -123,17 +125,4 @@ ${erkekk}
 
 message.channel.send(theartist)
 
-};
-
-exports.conf = {
-enabled: false,
-guildOnly: true,
-aliases: ["say"],
-permLevel: 0
-};
-
-exports.help = {
-name: "say",
-usage: "say",
-description: "sunucuyu sayar sj"
-};
+}
