@@ -1,19 +1,5 @@
 const yedlixdiscord = require('discord.js');
 
-exports.conf = {
-  enabled: true,
-  guildOnly: true,
-  aliases: ["bilgi", "sunucubilgi", "sunucu-bilgi", "sb"],
-  permLevel: 0,
-  kategori: "bot",
-};
-
-exports.help = {
-  name: 'say',
-  description: 'yedlix',
-  usage: 'yedlix',
-
-};
 exports.run = async (client, message, args) => {
     var tagdakiler = 0;
   let tag = "☆";
