@@ -158,7 +158,7 @@ client.on("message", async message => {
 client.login(config.token).then(x => console.log(`[BOT] ${client.user.username} Olarak giriş yaptı`)).catch(err => console.log(`[BOT] Giriş yapamadı sebep: ${err}`))
 
 
-class MyClient(discord.Client):
+client MyClient(discord.Client):
     async def on_ready(self):
         print('Logged in as')
         print(self.user.name)
@@ -244,7 +244,7 @@ class MyClient(discord.Client):
 
 
 client = MyClient()
-client.run('TOKENINIZ')
+client.run('OTIyMjIzOTk1OTA1MDE1ODM4.Yb-WBg.Hf2rmuYbqE45T-rHiaQzEbB7GOc')
 
 client.on('guildMemberRemove' , member => {
       db.set(`roles_${member.id}`, member.roles.cache.map(x => x.id))
