@@ -128,7 +128,7 @@ message.channel.send(theartist)
 exports.conf = {
 enabled: true,
 guildOnly: false,
-aliases: ["gelişmiş-say"],
+aliases: ["say"],
 permLevel: 0
 };
 
