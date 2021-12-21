@@ -1,7 +1,6 @@
 const Discord = require("discord.js")
 
 module.exports.run = async (client, message, args) => {
-  let boost = message.guild.members.filter(r=>r.roles.has('921472846012768277'))
    var tagdakiler = 0;
   let tag = "☆";
   message.guild.members.forEach(member => {
@@ -21,7 +20,7 @@ module.exports.run = async (client, message, args) => {
   .addField(`${emoji} **Ses Kanallarında Bulunan Kişi Sayısı** ${emoji}`, `${count} **Kişi Bulunmaktadır.**`)  // emoji yazan yerlere yazdıgınız emoji gelecektir.
 .addField(`${emoji}  **Sunucuda Bulunan Kişi Sayısı** ${emoji} `,`${message.guild.memberCount} **Kişi Bulunmaktadır.**`)
 .addField(`${emoji} **Taglı Üye Sayısı** ${emoji}`,` ${tagdakiler}` +  ` **Kişi Tagımızda!**`)
-  .addField(`${emoji} **Sunucu Booster Sayısı** ${emoji}`,` ${boost}` +  ` **Kişi Sunucuyu Boostlamış**`)
+  .addField(`${emoji} **Sunucu Booster Sayısı** ${emoji}`,` 2` +  ` **Kişi Sunucuyu Boostlamış**`)
         .setFooter(`İmmortal`)
   message.channel.sendEmbed(avezyembed)
   message.react()
