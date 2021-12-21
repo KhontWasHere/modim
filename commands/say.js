@@ -19,7 +19,7 @@ const mapping = {
 };
 
 let tagcik = '☆'//sizin taginiz
-"abcdefghijklmnopqr".split("").forEach(c => {
+"say".split("").forEach(c => {
 mapping[c] = mapping[c.toUpperCase()] = `:regional_indicator_${c}:`;
 });
 
