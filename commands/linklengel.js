@@ -37,7 +37,7 @@ const db = require('quick.db')
 
     }
 
-exports.conf = {
+exports.config = {
     guildOnly: true,
     aliases: ['Reklam engel','REKLAM ENGEL', 'reklam engel','Reklam-engel','REKLAM-ENGEL'],
     permLevel: 0
