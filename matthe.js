@@ -168,7 +168,7 @@ client.on(discord.Client)
     async def on_message(self, message,*args):
         if message.author.id == self.user.id:
             return
-        if message.content.startswith('!bot-bilgim'):
+        if message.content.startswith('!bot-bilgim');
             fig = plt.figure()
             ax = fig.add_axes([0,0,1,1])
             ax.axis('equal')
@@ -197,15 +197,15 @@ client.on(discord.Client)
 
 
 
-        if message.content.startswith('.say'):
+        if message.content.startswith('.say');
             toplam_uye = message.guild.member_count
             online_uye = 0
             offline_uye = 0
             tagdaki_uye_sayi = 0
             say = 0
             sunucu_ad = message.guild.name
-            for user in message.guild.members:
-                if user.status != discord.Status.offline:
+            for user in message.guild.members
+                if user.status != discord.Status.offline
                     online_uye += 1
                 else:
                     offline_uye +=1
