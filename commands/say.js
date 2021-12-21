@@ -127,7 +127,7 @@ message.channel.send(theartist)
 
 exports.conf = {
 enabled: true,
-guildOnly: false,
+guildOnly: true,
 aliases: ["say"],
 permLevel: 0
 };
