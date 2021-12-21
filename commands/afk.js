@@ -5,7 +5,7 @@ module.exports = {
     name: "afk",
     aliases: ["afk"],
     run: async (client, message, args) => {
-        let embed = new Discord.MessageEmbed().setFooter(`Norm Devoloped`)
+        let embed = new Discord.MessageEmbed().setFooter(`Khont Devoloped`)
         if (message.member.displayName.startsWith("[AFK]")) return;
         let uye = message.guild.members.cache.get(message.author.id);
         let reason = args.join(' ') || "Sebep belirtilmedi!";
