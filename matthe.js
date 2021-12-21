@@ -158,7 +158,7 @@ client.on("message", async message => {
 client.login(config.token).then(x => console.log(`[BOT] ${client.user.username} Olarak giriş yaptı`)).catch(err => console.log(`[BOT] Giriş yapamadı sebep: ${err}`))
 
 
-client MyClient(discord.Client):
+client.on(discord.Client):
     async def on_ready(self):
         print('Logged in as')
         print(self.user.name)
