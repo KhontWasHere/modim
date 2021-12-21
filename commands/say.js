@@ -1,30 +1,139 @@
-const yedlixdiscord = require('discord.js');
+const Discord = require("discord.js");
 
-exports.run = async (client, message, args) => {
-    var tagdakiler = 0;
-  let tag = "☆";
-  message.guild.members.forEach(member => {
-    if(member.user.username.includes(tag)) {
-      tagdakiler = tagdakiler+1
-  const seskanallari = message.guild.channels.cache.filter(c => c.type === 'voice');
-  let yedlix3 = 0
-  let  yedlix2 = message.guild.members.cache.filter(m => !m.user.bot && m.user.presence.status !== "offline").size
-  let metinkanallari = message.guild.channels.cache.filter(m => m.type == "text").size;
-  for (const [id, voiceChannel] of seskanallari) yedlix3 += voiceChannel.members.size;
-  const yedlix = new yedlixdiscord.MessageEmbed()
-  .setColor("0x36393F")
-  .setTitle("İmmortal")
-  .setFooter("İmmortal")
-  .setTimestamp()
-  .setDescription(`
- Toplam üye sayısı: **${message.guild.memberCount}**
- Toplam çevrimiçi üye sayısı: **${yedlix2}**
-Taglı Üye Sayısı: ${tagdakiler}` +  ` **Kişi Tagımızda!**
- Toplam metin kanalı sayısı: **${metinkanallari}**
- Toplam ses kanalı sayısı: **${seskanallari.size}**
- Toplam çevrimiçi durumda olan üye sayısı: **${message.guild.members.cache.filter(o => o.presence.status === 'online').size}**
- Toplam boşta durumda olan üye sayısı: **${message.guild.members.cache.filter(i => i.presence.status === 'idle').size}**
- Toplam rahatsız etme durumda olan üye sayısı: **${message.guild.members.cache.filter(i => i.presence.status === 'dnd').size}**
+const mapping = {
+  " ": "   ",
+ '0': "<a:sifir:921830098393518080>",
+ '1': "<a:bir:921828914303762532>",
+ '2': "<a:iki:921828958218117200>",
+ '3': "<a:uc:921828996516307005>",
+ '4': "<a:dort:921829037893103707>",
+ '5': "<a:bes:921829079425122314>",
+ '6': "<a:alti:921829109842194542>",
+ '7': "<a:yedi:921829137914667078>",
+ '8': "<a:sekiz:921829197830291496>",
+ '9': "<a:dokuz:921829234786312262>,
+  "!": ":exclamation:",
+  "?": ":question:",
+  "#": ":hash:",
+  "*": ":asterisk:"
+};
+
+let tagcik = '☆'//sizin taginiz
+"abcdefghijklmnopqr".split("").forEach(c => {
+mapping[c] = mapping[c.toUpperCase()] = `:regional_indicator_${c}:`;
+});
+
+exports.run = function(client, message, args) {
+
+let selam = message.guild.members.cache.filter(
+m => m.user.presence.status === "offline"
+).size; 
+let offlinee = '**Çevrimdışı Kişi Sayısı: **' +
+`${selam}`
+.split("")
+.map(c => mapping[c] || c)
+.join(" ")
+let plasmic = message.guild.memberCount;
+let sunucu = '**Sunucudaki Kişi Sayısı: **' + 
+`${plasmic}`
+.split("")
+.map(c => mapping[c] || c)
+.join(" ")
+let abcqwe = message.guild.members.cache.filter(m => !m.user.bot && m.user.presence.status !== "offline").size;;
+let onlinee = '**Çevrimiçi Kişi Sayısı: **' +
+`${abcqwe}`
+.split("")
+.map(c => mapping[c] || c)
+.join(" ")
+
+let aw = message.guild.members.cache.filter(m => m.user.username.includes(tagcik)).size
+let tagg = '**Tagi Kullanan Kişi Sayısı: **' +
+`${aw}`
+.split("")
+.map(c => mapping[c] || c)
+.join("")
+
+let keremtheartist = message.guild.members.cache.filter(
+m => m.user.presence.status === "idle"
+).size; 
+let idlee = '**Boştaki Kişi Sayısı: **' +
+`${keremtheartist}`
+.split("")
+.map(c => mapping[c] || c)
+.join(" ")
+
+let donotdisturb = message.guild.members.cache.filter(
+m => m.user.presence.status === "dnd"
+).size; 
+let dndd = '**Rahatsız Etmeyindeki Kişi SayısI: **' +
+`${donotdisturb}`
+.split("")
+.map(c => mapping[c] || c)
+.join(" ")
+
+
+const ciguli = message.guild.channels.cache.filter(channel => channel.type == "voice").map(channel => channel.members.size).reduce((a, b) => a + b); 
+let sess = '**Sesteki Kişi Sayısı: **' +
+`${ciguli}`
+.split("")
+.map(c => mapping[c] || c)
+.join(" ")
+
+const kizciklar = message.guild.roles.cache.get("KADIN ROLÜNÜZÜN IDSİ").members.size //KADINROLÜNÜZÜNIDSİNİGİRİN
+let kizz = '**Kadın Kullanıcıların Sayısı: **' +
+`${kizciklar}`
+.split("")
+.map(c => mapping[c] || c)
+.join(" ")
+
+
+
+const erkekcikler = message.guild.roles.cache.get("ERKEKROLÜNÜZÜIDSİ").members.size; //ERKEK ROLÜNÜZÜN IDSİNİ GİRİN
+let erkekk = '**Erkek Kullanıcıların Sayısı: **' +
+`${erkekcikler}`
+.split("")
+.map(c => mapping[c] || c)
+.join(" ")
+
+
+const theartist = new Discord.MessageEmbed()
+.setTitle(`Sunucu İstatikleri`)
+.setDescription(`
+${sunucu}
+
+${tagg}
+
+${offlinee}
+
+${onlinee}
+
+${idlee}
+
+${dndd}
+
+${sess}
+
+${kizz}
+
+${erkekk}
 `)
-message.channel.send(yedlix)
-  }
+.setColor("BLACK")
+.setFooter(`Khont`)
+
+
+message.channel.send(theartist)
+
+};
+
+exports.conf = {
+enabled: true,
+guildOnly: false,
+aliases: ["gelişmiş-say"],
+permLevel: 0
+};
+
+exports.help = {
+name: "say",
+usage: "say",
+description: "sunucuyu sayar sj"
+};
