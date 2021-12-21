@@ -176,4 +176,27 @@ client.on('guildMemberAdd', (member) => {
 });
 
     //----------------------
+client.on('message', message => {
 
+  // Datadaki "Reklam Engel" Kısmını Çağıralım
+  let codemarefireklamengel = db.fetch(`linkcodemarefi_${message.guild.id}`)
+
+  // Komutlarımıza Geçelim, Eğer Reklam Engel Sistemi Aktif İse Reklam Yapan Kullanıcıya Uyarı Verelim
+  if(codemarefireklamengel === 'codemarefiaktif'){
+    // Reklam Ayarlamaları
+    const codemarefireklamliste = ['.org','.tr','.space','.funy','.fun','.com','.xyz','.glitch-me','.eueo.org','free.biz','.biz','.free','.blogspot-com','.alan','.com.tr','.sexs','.hub','.dance','.in','.net','.shop','.store','.click','.tech','.best','.college','.me','.site','.online','.art','.host','.baby','.website','.blog','.link','.top','.info','.press','.monster','.services','.gg','discord.gg']
+    if(codemarefireklamliste.some(codemarefi => message.content.includes(codemarefi))){
+      // Kullanıcının Mesajını Silelim
+      message.delete();
+
+      // Reklam yapan terbiyesize uyarı mesajı atalım ve bu 5 saniye sonra chati kirletmemek açısından silinsin.
+      const reklamyasak = new Discord.MessageEmbed()
+      .setDescription(`${message.author} - **Hey Dostum!. Bu Sunucuda Reklam Yapmana İzin Vermem.**`) 
+      .setColor('#36393F')
+      message.channel.send(reklamyasak).then(codemarefisil => {
+        codemarefisil.delete({timeout: 5000})
+      })
+    }
+  } else {
+    return
+  }
