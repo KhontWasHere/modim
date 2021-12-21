@@ -79,7 +79,7 @@ let sess = '**Sesteki Kişi Sayısı: **' +
 .map(c => mapping[c] || c)
 .join(" ")
 
-const kizciklar = message.guild.roles.cache.get("KADIN ROLÜNÜZÜN IDSİ").members.size //KADINROLÜNÜZÜNIDSİNİGİRİN
+const kizciklar = message.guild.roles.cache.get("921443100247859200").members.size //KADINROLÜNÜZÜNIDSİNİGİRİN
 let kizz = '**Kadın Kullanıcıların Sayısı: **' +
 `${kizciklar}`
 .split("")
@@ -88,7 +88,7 @@ let kizz = '**Kadın Kullanıcıların Sayısı: **' +
 
 
 
-const erkekcikler = message.guild.roles.cache.get("ERKEKROLÜNÜZÜIDSİ").members.size; //ERKEK ROLÜNÜZÜN IDSİNİ GİRİN
+const erkekcikler = message.guild.roles.cache.get("921443100231102541").members.size; //ERKEK ROLÜNÜZÜN IDSİNİ GİRİN
 let erkekk = '**Erkek Kullanıcıların Sayısı: **' +
 `${erkekcikler}`
 .split("")
