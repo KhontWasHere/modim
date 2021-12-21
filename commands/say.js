@@ -35,5 +35,5 @@ exports.conf = {
 exports.help = {
   name: 'say',
   description: ' Sunucudaki ve sesdeki üyeleri gösterir',
-  usage: '!say'
+  usage: '.say'
 };;
