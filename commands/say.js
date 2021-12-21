@@ -24,8 +24,6 @@ module.exports.run = async (client, message, args) => {
   .addField(`${emoji} **Sunucu Booster Sayısı** ${emoji}`,` ${boost}` +  ` **Kişi Sunucuyu Boostlamış**`)
         .setFooter(`İmmortal`)
   message.channel.sendEmbed(avezyembed)
-  message.react("<a:mavimsitikimmo:921679213893910549>")
-
 }
 exports.conf = {
   enabled: true,
