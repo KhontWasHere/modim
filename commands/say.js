@@ -133,7 +133,7 @@ permLevel: 0
 };
 
 exports.help = {
-name: "say",
-usage: "say",
+name: ".say",
+usage: ".say",
 description: "sunucuyu sayar sj"
 };
