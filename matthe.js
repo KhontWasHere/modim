@@ -109,7 +109,7 @@ client.on("messageDelete", async message => {
 client.on('guildMemberAdd', (member) => {
     if (member.user.bot) return;
     db.add(`girişçıkış.${member.id}`, 1);
-    if (db.get(`girişçıkış.${member.id}`) >= 3) {//3 defa çık gir yaparsa
+    if (db.get(`girişçıkış.${member.id}`) >= 5) {//3 defa çık gir yaparsa
         member.guild.members.ban(member.id, { reason: `Sunucudan kısa sürede çok fazla gir çık yapmak.` })
         client.channels.cache.get(config.penals.ban.log).send(`${member} adlı kullanıcı sunucuya kısa süre içinde defalarca çık gir yaptığı için sunucudan banlandı!`)
 member.send("Sunucuya kısa süre içinde defalarca çık gir yaptığın için sunucudan banlandın!")
@@ -157,10 +157,7 @@ client.on("message", async message => {
 
 client.login(config.token).then(x => console.log(`[BOT] ${client.user.username} Olarak giriş yaptı`)).catch(err => console.log(`[BOT] Giriş yapamadı sebep: ${err}`))
 
-import discord
-import random
-from matplotlib import pyplot as plt
-import numpy as np
+
 class MyClient(discord.Client):
     async def on_ready(self):
         print('Logged in as')
