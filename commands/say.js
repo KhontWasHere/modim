@@ -1,6 +1,6 @@
 const Discord = require("discord.js")
 
-module.exports.run = async (client, message, args) => {
+exports.run = async (client, message, args) => {
    var tagdakiler = 0;
   let tag = "☆";
   message.guild.members.forEach(member => {
