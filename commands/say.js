@@ -1,12 +1,41 @@
-const Discord = require('discord.js');
-exports.run = async (client, message, args) => { if (!message.guild) return message.author.sendMessage('Bu Komutu Sadece Sunucularda Kulanabilirsiniz!');
-const voiceChannels = message.guild.channels.filter(c => c.type === 'voice');
-let count = 0;
-for (const [id, voiceChannel] of voiceChannels) count += voiceChannel.members.size;
- let tag = '☆' const codare = new Discord.RichEmbed() .setColor("RED") .setTitle(`İmmortal`) 
- .addField("Sunucudaki üye sayısı", message.guild.memberCount) 
- .addField("Çevrimiçi üye sayısı", message.guild.members.filter(m => !m.user.bot && m.user.presence.status !== "offline").size) 
- .addField("Seslideki üye sayısı", count) 
- .addField("Tagdaki üye sayısı", message.guild.members.filter(m => m.user.username.includes(tag)).size) message.channel.send(codare); } 
-exports.conf = { enabled: true, guildOnly: false, aliases: ['sayı'], permLevel: 0 };
-exports.help = { name: 'say', description: 'Say', usage: 'say' };
+const Discord = require("discord.js")
+
+module.exports.run = async (client, message, args) => {
+  let boost = message.guild.members.filter(r=>r.roles.has('921472846012768277')).size
+   var tagdakiler = 0;
+  let tag = "☆";
+  message.guild.members.forEach(member => {
+    if(member.user.username.includes(tag)) {
+      tagdakiler = tagdakiler+1
+    }
+  })
+ 
+  const voiceChannels = message.guild.channels.filter(c => c.type === 'voice');
+    let count = 0;
+   
+    for (const [id, voiceChannel] of voiceChannels) count += voiceChannel.members.size;
+      const emoji = client.emojis.find(emoji => emoji.name === "krkr"); // emojinin adını yazın.
+  const avezyembed = new Discord.RichEmbed()
+  .setThumbnail(client.user.avatarURL)
+  .setColor("black")
+  .addField(`${emoji} **Ses Kanallarında Bulunan Kişi Sayısı** ${emoji}`, `${count} **Kişi Bulunmaktadır.**`)  // emoji yazan yerlere yazdıgınız emoji gelecektir.
+.addField(`${emoji}  **Sunucuda Bulunan Kişi Sayısı** ${emoji} `,`${message.guild.memberCount} **Kişi Bulunmaktadır.**`)
+.addField(`${emoji} **Taglı Üye Sayısı** ${emoji}`,` ${tagdakiler}` +  ` **Kişi Tagımızda!**`)
+  .addField(`${emoji} **Sunucu Booster Sayısı** ${emoji}`,` ${boost}` +  ` **Kişi Sunucuyu Boostlamış**`)
+        .setFooter(`İmmortal`)
+  message.channel.sendEmbed(avezyembed)
+  message.react()
+
+}
+exports.conf = {
+  enabled: true,
+  guildOnly: false,
+  aliases: [],
+  permLevel: 0
+};
+
+exports.help = {
+  name: 'say',
+  description: ' Sunucudaki ve sesdeki üyeleri gösterir',
+  usage: '!say'
+};;
