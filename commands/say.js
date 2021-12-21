@@ -26,5 +26,5 @@ Taglı Üye Sayısı: ${tagdakiler}` +  ` **Kişi Tagımızda!**
  Toplam boşta durumda olan üye sayısı: **${message.guild.members.cache.filter(i => i.presence.status === 'idle').size}**
  Toplam rahatsız etme durumda olan üye sayısı: **${message.guild.members.cache.filter(i => i.presence.status === 'dnd').size}**
 `)
-  message.channel.send(yedlix)
+message.channel.send(yedlix)
   }
