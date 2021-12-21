@@ -1,7 +1,7 @@
 const Discord = require("discord.js")
 
 module.exports.run = async (client, message, args) => {
-  let boost = message.guild.members.filter(r=>r.roles.has('')).size
+  let boost = message.guild.members.filter(r=>r.roles.has('921472846012768277')).size
    var tagdakiler = 0;
   let tag = "☆";
   message.guild.members.forEach(member => {
