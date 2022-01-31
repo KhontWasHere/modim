@@ -1,27 +1,27 @@
 {
-    "token": "ODUyMTc5MjA2NDIyNTI4MDUw.YMDDuw.31h_rPYIaVxHT3kIl_1nIkhf93Q",
+    "token": "OTM3NzU1NjgwNTg3Mjg0NTUw.YfgXCA.KiAjtTSYyg0Ze58wijyYSUS3bo8",
     "bot": {
-        "owner": "536834555898757131",
-        "botdurum": "İmmortal Ekip Alım",
+        "owner": "926949136530538537",
+        "botdurum": "Keep Calm Discord,This Is erveste",
         "prefix": ".",
-        "GuildID": "921443100092678185"
+        "GuildID": "923303986709295154"
     },
     "penals": {
         "ban": {
-            "staff": "921443100323356691",
-            "log": "921443104152756231",
+            "staff": "937756457527541800",
+            "log": "937755568968446003",
             "limit": 3
         },
         "jail": {
-            "staff": "921443100323356690",
-            "roles": "921443100289806450",
-            "log": "921443104152756232",
+            "staff": "937756594828099604",
+            "roles": "937755095125360660",
+            "log": "937755607337951243",
             "limit": 5
         },
         "mute": {
-            "staff": "921443100323356689",
-            "roles": "921443100281438237",
-            "log": "921443104337297432",
+            "staff": "937756721521233950",
+            "roles": "937755427645558804",
+            "log": "937755620776493096",
             "limit": 5
         },
       "points": {
@@ -31,14 +31,14 @@
       }
     },
     "logs": {
-        "messagelog": "921443104337297434",
-        "voicelog": "921443104337297436"
+        "messagelog": "937755746509127740",
+        "voicelog": "937755760564260965"
        
 
     },
     "roles": {
-        "boosterrole": "921472846012768277",
-        "viprole": "921443100306587660",
+        "boosterrole": "923344244087857152",
+        "viprole": "936746842765545482",
         "designerrole": "921443100197543965",
         "musiciansrole": "921443100197543963"
     },
@@ -48,13 +48,13 @@
         "meetingchannel": "921443101741035576"
     },
     "channels": {
-        "chat": "921443101552304194",
-        "voicechannel": "921680500798656512"
+        "chat": "937075442207309924",
+        "voicechannel": "937376869723041872"
     },
     "parents": {
-        "publicparents": "908750973139308544"
+        "publicparents": "937075403326119958"
     },
     "registration": {
-        "GuilDTag": "∆"
+        "GuilDTag": ""
     }
 }
