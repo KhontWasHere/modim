@@ -11,7 +11,7 @@ const aliases = client.aliases = new Collection();
 
 
 client.on("ready", () => {
-    client.user.setPresence({activity: {name: (config.bot.botdurum)}, status: "online"})
+    client.user.setPresence({activity: {name: (config.bot.botdurum)}, status: "dnd"})
     client.channels.cache.get(config.channels.voicechannel).join()
 })
 
