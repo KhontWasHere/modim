@@ -1,0 +1,1 @@
+eşek siken altyapı boranın
